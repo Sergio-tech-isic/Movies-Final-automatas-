@@ -49,12 +49,19 @@ function Home() {
             <section class="featured-movie">
                 <div class="container">
                     <div class="movie-poster">
-                        <img src="images/mortal.jpeg" alt="Mortal Kombat (2021)"/>
+                        <a href="/show/41"><img src="images/mortal.jpeg" alt="Mortal Kombat (2021)"/></a>
+                        
                     </div>
                     <div class="movie-info">
                         <h2>Mortal Kombat (2021)</h2>
                         <p>MMA fighter Cole Young Cole Young busca a los mejores campeones de la Tierra para enfrentarse a los enemigos de Outworld en una batalla de alto riesgo por el universo.</p>
-                        <button class="watch-now"> VER AHORA </button>
+                        <button 
+                            class="watch-now" 
+                            onClick={() => window.location.href = "/show/41"}>
+                                VER AHORA 
+                            
+                        </button>
+                        
                     </div>
                 </div>
             </section>

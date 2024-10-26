@@ -9,7 +9,6 @@
  
 }
 
-
 /* Fondo negro cromado y platinado */
 
 body {
@@ -102,7 +101,7 @@ header {
 /* Contenedor del header */
 .container {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
+    align-items: end; /* Alinea verticalmente los elementos */
     justify-content: space-between; /* Espacio entre logo y nav */
 }
 
@@ -172,7 +171,7 @@ nav ul li a:hover {
 /* Efecto de imagen en tarjetas (3D) */
 .card img {
   width: calc(100% - 10px); /* Ajusta el ancho para dar espacio al borde */
-  height: auto;
+  height: 300px;
   border-radius: 8px;
 }
 
@@ -184,20 +183,24 @@ nav ul li a:hover {
    
 
 .card {
-  width: 300px; /* Ancho fijo para las tarjetas */
+  width: 400px; /* Ancho fijo para las tarjetas */
+  height: 400px auto;
+  flex: 1;
   max-width: 90%; /* Asegura que no exceda el 90% del contenedor */
   margin: 20px auto; /* Centra las tarjetas y añade margen vertical */
   border-radius: 8px; /* Bordes redondeados */
   padding: 10px; /* Espaciado interno */
   background-color: #fff; /* Color de fondo de la tarjeta */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-image: url(https://media.istockphoto.com/id/1356756917/es/foto/textura-grunge-azul.jpg?s=612x612&w=0&k=20&c=hx7OFmdjGeFdpinXluxFzr4rHxvfNJ0A-8CbWucwThg=);
+
 }
 
 /* Estilo del título de la película */
 .card h2 {
     font-size: 28px;
     margin-top: 20px;
-    color: #ba0a0a;
+    color: #f7da3a;
     font-family: 'Franklin Gothic Medium', Arial, sans-serif;
     font-weight: bold;
     text-align: center; /* Centra el texto horizontalmente */
@@ -209,9 +212,11 @@ nav ul li a:hover {
 
 /* Estilo de la descripción y detalles */
 .card p {
-    color:#020202;
+  width: fit-content;
+  height: fit-content;
+    color:#fdf7f7;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     font-family: 'Trebuchet MS', sans-serif
 
@@ -247,7 +252,7 @@ nav ul li a:hover {
 }
 
 /* Responsividad para dispositivos móviles*/
-@media (max-width :800px) {
+@media (max-width :600px) {
     input[type="text"] {
         width :100%; /* Campo de búsqueda ocupa todo el ancho en móviles*/
         margin-bottom :15px; /* Espaciado reducido en móviles*/
@@ -256,6 +261,67 @@ nav ul li a:hover {
     .card h2 {
         font-size :1.1em; /* Tamaño del título reducido en móviles*/
     }
+}
+
+
+  .card h2 {
+      font-size :1.1em; /* Tamaño del título reducido en móviles*/
+  }
+
+/* Estilos generales para pantallas grandes */
+@media (min-width: 1200px) {
+.App {
+    padding: 40px; /* Espaciado mayor en pantallas grandes */
+}
+
+h1 {
+    font-size: 3em; /* Tamaño de fuente grande */
+}
+
+.card {
+    width: 300px; /* Ancho fijo para tarjetas */
+}
+}
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 1199px) and (min-width: 600px) {
+.App {
+    padding: 30px; /* Espaciado moderado */
+}
+
+h1 {
+    font-size: 2.5em; /* Tamaño de fuente mediano */
+}
+
+.card {
+    width: 45%; /* Tarjetas ocupan el 45% del ancho */
+    margin: 10px auto; /* Margen centrado */
+}
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 599px) {
+.App {
+    padding: 20px; /* Espaciado reducido para móviles */
+}
+
+h1 {
+    font-size: 1.8em; /* Tamaño de fuente pequeño */
+}
+
+.grid {
+    grid-template-columns: 1fr; /* Una columna en móviles */
+}
+
+input[type="text"] {
+    width: 100%; /* Campo de búsqueda ocupa todo el ancho en móviles */
+    margin-bottom: 15px; /* Espaciado reducido en móviles */
+}
+
+.card {
+    width: 90%; /* Tarjetas ocupan el 90% del ancho */
+    margin: 10px auto; /* Margen centrado */
+}
 }
 /* Estilo para el botón "VER AHORA" */
 .watch-now {

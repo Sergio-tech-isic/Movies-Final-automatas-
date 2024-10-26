@@ -82,7 +82,7 @@ function Movies() {
                             <input type="date" id="start-date"/>
                             <label htmlFor="end-date">Fecha final:</label>
                             <input type="date" id="end-date"/>
-                            <button type="submit">Buscar por fecha</button>
+                            <button type="submit" className='watch-now'>Buscar por fecha</button>
                         </form>
                     </div>
                 </div>

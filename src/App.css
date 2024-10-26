@@ -1,0 +1,280 @@
+/* App.css */
+/* Estilo general */
+.App {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+ 
+}
+
+
+/* Fondo negro cromado y platinado */
+
+body {
+  background: linear-gradient(135deg, #101010 25%, #0e0d0d 25%, #0e0d0d 50%, #070707 50%, #101010 75%, #141414 75%, #050505 100%);
+  background-size: 750px 750px; /* Tamaño del patrón */
+  animation: shine 8s infinite; /* Animación de brillo */
+}
+
+/* Efecto de brillo */
+@keyframes shine {
+  0% {
+    background-position: -200px -200px; /* Comienza fuera de la vista */
+  }
+  100% {
+    background-position: 200px 200px; /* Mueve el brillo a través del fondo */
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Título */
+h1 {
+  font-family: Rockwell Extra Bold;
+  color: rgb(254, 225, 9); /* Color del texto en plateado */
+  text-shadow: 
+    2px 2px 4px rgba(89, 71, 0, 0.89), /* Sombra para efecto 3D */
+    -2px -2px 4px rgba(337, 337, 237, 0.9); /* Sombra clara para dar brillo */
+  background-color: #004b9c99; /* Color de fondo */
+  min-height: 20vh; /* Altura mínima */
+  display: flex; /* Flexbox para centrar contenido */
+  flex-direction: column; /* Dirección de la columna */
+  align-items: center; /* Alineación horizontal */
+  justify-content: center; /* Alineación vertical */
+  font-size: 150px; /* Tamaño de fuente fijo a 30px */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 60px 2px; /* Margen superior e inferior, y laterales */
+}
+
+h2 {
+  color: rgb(53, 87, 151); /* Color azul marino */
+  text-align: justify; /* Centra el texto */
+  margin: 20px 0; /* Espaciado vertical alrededor del título */
+}
+
+
+
+/* Estilo del campo de búsqueda */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin: 30px 20px; /* Margen superior e inferior, y laterales */
+}
+
+/* Estilo de la cuadrícula */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 50px;
+}
+
+/* Contenedor del header */
+.container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: 12px; /* Espacio entre logo y nav */
+  padding: 4px; /* Espaciado interno */
+  color: #ccc;
+}
+
+/* Estilo general para el header */
+header {
+    background: linear-gradient(to right, #fafafa, #0c69d996); /* Fondo blanco degradado */
+    padding: 10px 10px; /* Espaciado interno */
+    
+}
+
+/* Estilo para la barra horizontal */
+.horizontal-bar {
+    flex-grow: 1; /* Permite que la barra crezca para llenar el espacio */
+    height: 2px; /* Altura de la barra */
+    background-color: transparent; /* Hacer que la barra sea transparente */
+    margin: 0 20px; /* Ajustar márgenes a los lados de la barra */
+}
+
+/* Contenedor del header */
+.container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre logo y nav */
+}
+
+/* Estilos para el logo */
+.logo img {
+    max-height: 50px; /* Limita la altura de la imagen del logo */
+    width: auto; /* Mantiene la proporción de la imagen */
+    
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+  list-style-type: none; /* Elimina viñetas */
+  padding: 0; /* Elimina padding por defecto */
+  margin: 0; /* Elimina margen por defecto */
+}
+
+nav ul li {
+  display: inline; /* Muestra los elementos en línea */
+  margin-right: 20px; /* Espacio entre los elementos del menú */
+}
+
+nav ul li a {
+  text-decoration: none; /* Elimina subrayado de enlaces */
+  color: #ffffff; /* Color blanco para el texto del enlace */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+}
+
+nav ul li a:hover {
+  color: #007BFF; /* Color al pasar el ratón sobre el enlace */
+}
+
+/* Estilos para la sección principal */
+.featured-movie {
+  padding: 40px;
+  display: flex; /* Usar flexbox para alinear imagen y texto */
+  align-items: center; /* Centrar verticalmente los elementos dentro del contenedor */
+}
+
+.movie-poster {
+  margin-right: 30px; /* Espacio entre la imagen y el texto */
+}
+
+.movie-poster img {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantiene proporciones de la imagen */
+  width: calc(100% - 10px); /* Ajusta el ancho para dar espacio al borde */
+  border-radius: 15px; /* Bordes redondeados */
+
+  /* Agregar borde y sombra */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* Borde blanco translúcido */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.6); /* Sombra blanca suave */
+
+  transition: transform .2s ease-in-out; /* Transición suave para transformaciones */
+}
+
+/* Efecto de movimiento al pasar el cursor sobre la imagen */
+.movie-poster:hover img {
+  transform: translateY(-10px); /* Mueve la imagen hacia arriba al pasar el ratón */
+}
+
+/* Estilo para el texto de la película */
+.movie-info {
+  color: white; /* Color del texto */
+}
+
+/* Efecto de imagen en tarjetas (3D) */
+.card img {
+  width: calc(100% - 10px); /* Ajusta el ancho para dar espacio al borde */
+  height: auto;
+  border-radius: 8px;
+}
+
+.card:hover img {
+  transform: scale(1.20); /* Efecto de zoom al pasar el ratón sobre la imagen */
+  box-shadow: rgba(25, 87, 255, 0.795) 0px 10px 20px; /* Sombra para dar efecto de profundidad */
+}
+/* Estilo de las tarjetas de película */
+   
+
+.card {
+  width: 300px; /* Ancho fijo para las tarjetas */
+  max-width: 90%; /* Asegura que no exceda el 90% del contenedor */
+  margin: 20px auto; /* Centra las tarjetas y añade margen vertical */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  background-color: #fff; /* Color de fondo de la tarjeta */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo del título de la película */
+.card h2 {
+    font-size: 28px;
+    margin-top: 20px;
+    color: #ba0a0a;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center; /* Centra el texto horizontalmente */
+    text-transform: capitalize; /* Capitaliza la primera letra de cada palabra */
+    text-shadow: 3px 2px 6px #080808a3, -4px -3px 8px #e0e0e2; /* Sombra en 3D */
+
+    
+}
+
+/* Estilo de la descripción y detalles */
+.card p {
+    color:#020202;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif
+
+}
+
+/* Estilo de la calificación */
+.rating {
+    color : gold;
+}
+
+.rating span {
+    font-size :1.8em; /* Tamaño de las estrellas*/
+}
+
+/* Estilo de paginación */
+.pagination {
+    margin-top :35px;
+}
+
+.pagination button {
+    padding :20px;
+    margin :5px;
+    border-radius :5px;
+    border :none;
+    background-color :#007bff; /* Color del botón*/
+    color :rgb(255,252,252); /* Color del texto*/
+    cursor:pointer;
+    font-size: 22px;
+}
+
+.pagination button:hover {
+    background-color :#b30000; /* Color del botón al pasar el mouse*/
+}
+
+/* Responsividad para dispositivos móviles*/
+@media (max-width :800px) {
+    input[type="text"] {
+        width :100%; /* Campo de búsqueda ocupa todo el ancho en móviles*/
+        margin-bottom :15px; /* Espaciado reducido en móviles*/
+    }
+
+    .card h2 {
+        font-size :1.1em; /* Tamaño del título reducido en móviles*/
+    }
+}
+/* Estilo para el botón "VER AHORA" */
+.watch-now {
+  background-color: #004083; /* Color de fondo azul */
+  color: white; /* Color del texto en blanco */
+  font-weight: bold;
+  border: none; /* Sin borde */
+  padding: 12px 24px; /* Espaciado interno (vertical y horizontal) */
+  text-align: center; /* Centra el texto */
+  display: inline-block; /* Permite aplicar padding y margin correctamente */
+  font-size: 16px; /* Tamaño de la fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves para cambios de fondo y transformaciones */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.watch-now:hover {
+  background-color: #0d4785; /* Color de fondo más oscuro al pasar el ratón */
+  transform: translateY(-3px); /* Mueve el botón hacia arriba ligeramente */
+}

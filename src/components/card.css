@@ -1,0 +1,101 @@
+/* src/App.css */
+
+/* App.css */
+
+/* Estilo general */
+.App {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #1c1c1c; /* Color de fondo negro platinado */
+}
+
+/* Estilo del campo de búsqueda */
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo de la cuadrícula */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo de las tarjetas de película */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff; /* Fondo blanco para las tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo de las imágenes */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilo del título de la película */
+.card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Estilo de la descripción y detalles */
+.card p {
+    color: #555;
+}
+
+/* Estilo de la calificación */
+.rating {
+    color: gold;
+}
+
+.rating span {
+    font-size: 1.5em; /* Tamaño de las estrellas */
+}
+
+/* Estilo de paginación */
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff; /* Color del botón */
+    color: white; /* Color del texto */
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: 100%; /* Campo de búsqueda ocupa todo el ancho en móviles */
+        margin-bottom: 15px; /* Espaciado reducido en móviles */
+    }
+
+    .card h2 {
+        font-size: 1.1em; /* Tamaño del título reducido en móviles */
+    }
+}

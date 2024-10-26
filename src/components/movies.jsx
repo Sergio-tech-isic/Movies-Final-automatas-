@@ -41,22 +41,22 @@ function Movies() {
         }
     };
 
-    function filtrarFechasPorRango(fechaArray, fechaInicio, fechaFin) {
-        console.log(fechaArray);
-        console.log(fechaInicio);
-        console.log(fechaFin);
-        /*
-        // Convertir fechas de inicio y fin a objetos Date para comparación
-        let inicio = new Date(fechaInicio);
-        let fin = new Date(fechaFin);
-    
-        // Filtrar las fechas que estén en el rango (inclusive)
-        const filtrados = movies.filter(movie => {
-            let fechaActual = new Date(fecha);
-            return fechaActual >= inicio && fechaActual <= fin;
-        })
-        setFilteredMovies(filtrados);*/
+    const filtrarFechasPorRango = (e) => {
+        e.preventDefault();
+        
+        const fechaInicio = new Date(document.getElementById("start-date").value);
+        const fechaFin = new Date(document.getElementById("end-date").value);
+
+        if (fechaInicio && fechaFin) {
+            const filtrados = movies.filter(movie => {
+                const fechaActual = new Date(movie.releaseDate);
+                return fechaActual >= fechaInicio && fechaActual <= fechaFin;
+            });
+
+            setFilteredMovies(filtrados);
+            setPage(1); // Reiniciar a la primera página de resultados
         }
+    };
 
     // Paginación
     const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
@@ -74,7 +74,18 @@ function Movies() {
                     onChange={handleSearch} 
                 />
                 <br />
-                
+                <div className="tarjeta">
+                    <div className="fechas">
+                        <strong>Peliculas entre fechas</strong>
+                        <form onSubmit={filtrarFechasPorRango}>
+                            <label htmlFor="start-date">Fecha inicio:</label>
+                            <input type="date" id="start-date"/>
+                            <label htmlFor="end-date">Fecha final:</label>
+                            <input type="date" id="end-date"/>
+                            <button type="submit">Buscar por fecha</button>
+                        </form>
+                    </div>
+                </div>
                 
 
 

@@ -5,7 +5,7 @@ import Movies from './components/movies';
 import Home from './components/Home';
 import Show from './components/Show';
 import './App.css';
-import "./components/card.css"
+
 
 // Componente principal
 function App() {

@@ -41,6 +41,23 @@ function Movies() {
         }
     };
 
+    function filtrarFechasPorRango(fechaArray, fechaInicio, fechaFin) {
+        console.log(fechaArray);
+        console.log(fechaInicio);
+        console.log(fechaFin);
+        /*
+        // Convertir fechas de inicio y fin a objetos Date para comparación
+        let inicio = new Date(fechaInicio);
+        let fin = new Date(fechaFin);
+    
+        // Filtrar las fechas que estén en el rango (inclusive)
+        const filtrados = movies.filter(movie => {
+            let fechaActual = new Date(fecha);
+            return fechaActual >= inicio && fechaActual <= fin;
+        })
+        setFilteredMovies(filtrados);*/
+        }
+
     // Paginación
     const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
     const currentMovies = filteredMovies.slice((page - 1) * moviesPerPage, page * moviesPerPage);
@@ -57,18 +74,7 @@ function Movies() {
                     onChange={handleSearch} 
                 />
                 <br />
-                <div className="tarjeta">
-                    <div className="fechas">
-                        <strong>Peliculas entre fechas</strong>
-                        <form onSubmit="">
-                            <label htmlFor="start-date">Fecha inicio:</label>
-                            <input type="date" id="start-date"/>
-                            <label htmlFor="end-date">Fecha final:</label>
-                            <input type="date" id="end-date"/>
-                            <button>Buscar por fecha</button>
-                        </form>
-                    </div>
-                </div>
+                
                 
 
 
